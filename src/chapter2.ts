@@ -10,13 +10,13 @@ const T1 = 1;
 const T2 = 0.6;
 const t1 = 17;
 const t2 = 15;
-const T_2 = 1364084.03;
 //***CÁC PHẦN PHỤ THUỘC ĐỀ BÀI***
 
 //***CÁC PHẦN PHỤ THUỘC CHƯƠNG 1***
 const n_2 = 87.66;
 const n_3 = 25.05;
 const u_II_III = 3.5;
+const T_2 = 1364084.03;
 //***CÁC PHẦN PHỤ THUỘC CHƯƠNG 1***
 
 export class Chapter2 {
@@ -257,6 +257,12 @@ export class Chapter2 {
       z2: z2_rounded,
       x1,
       x2,
+      d1,
+      d2,
+      df1,
+      df2,
+      da1,
+      da2,
     };
   };
 
@@ -450,6 +456,12 @@ export class Chapter2 {
       z2,
       x1,
       x2,
+      d1,
+      d2,
+      df1,
+      df2,
+      da1,
+      da2,
     } = this.section3_4(aw);
     const { F, g0, v, bw } = this.section3_5(
       m,
@@ -465,5 +477,18 @@ export class Chapter2 {
     );
     this.section3_6(epsilona, x1, x2, z1, z2, F, g0, v, awx, bw, dw1, m);
     this.section3_7(usH, usF1, usF2);
+
+    const res = {
+      d1,
+      d2,
+      da1,
+      da2,
+      df1,
+      df2,
+      dw1,
+      dw2,
+      awx,
+      bw,
+    };
   };
 }

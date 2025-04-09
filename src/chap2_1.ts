@@ -1,11 +1,6 @@
-import { Chapter2 } from "./chapter2";
-
-const chapter2 = new Chapter2();
-chapter2.section3();
-
 // //chuong 2 phan 1
 
-// const Pdc = 14.769702429794178;//chuong 1
+// const Pdc = 15.99;//chuong 1
 // const ndc = 2935;//chuong 1
 
 // //n=ap+b 
