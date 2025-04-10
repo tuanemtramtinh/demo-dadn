@@ -15,10 +15,11 @@ const Ma2: number = 522907.2;
 const RDy: number = 5476.22;
 const RDx: number = 7362.5;
 const RMy: number = 10640.84;
-// const RNy: number = 
+const Ft4: number = 14948.9;
 const l22: number = 92;
 const l33: number = 576;
 const l32: number = 229.5;
+const l31: number = 344;
 
 const MAx = 154892.25;
 const MAy = 0;
@@ -561,11 +562,20 @@ const sN = (soN * stN) / (soN ** 2 + stN ** 2) ** (1 / 2);
 
 // *** BẮT ĐẦU CHƯƠNG 3 - PHẦN 8 ***
 
+const muy = 63;
+
 //TRỤC I
 const MtdDai: number = (0.75 * T_I ** 2) ** (1 / 2);
 const MtdA: number = (MAx ** 2 + MAy ** 2 + 0.75 * T_I ** 2) ** (1 / 2);
 const MtdB: number = (MBx ** 2 + MBy ** 2 + 0.75 * T_I ** 2) ** (1 / 2);
 const MtdC: number = 0;
+
+const dA = (MtdA / (0.1 * muy)) ** (1 / 3);
+const dB = (MtdB / (0.1 * muy)) ** (1 / 3);
+const dC = (MtdC / (0.1 * muy)) ** (1 / 3);
+const dAInc = dA * 1.11;
+const dBInc = dB * 1.11;
+const dCInc = dC * 1.11;
 
 console.log(MtdDai, MtdA, MtdB, MtdC);
 
@@ -577,12 +587,34 @@ const MtdE: number = (MEx ** 2 + MEy ** 2 + 0.75 * T_II ** 2) ** (1 / 2);
 const MtdF: number = (MFx ** 2 + MFy ** 2 + 0.75 * T_II ** 2) ** (1 / 2);
 const MtdG: number = 0;
 
+const dD = (MtdD / (0.1 * muy)) ** (1 / 3);
+const dE = (MtdE / (0.1 * muy)) ** (1 / 3);
+const dF = (MtdF / (0.1 * muy)) ** (1 / 3);
+const dG = (MtdG / (0.1 * muy)) ** (1 / 3);
+const dDInc = dD * 1.11;
+const dEInc = dE * 1.11;
+const dFInc = dF * 1.11;
+const dGInc = dG * 1.11;
+
 console.log(MtdD, MtdE, MtdF, MtdG);
 
 //TRỤC III
 const MtdM: number = 0;
 const MtdN: number = (MNx ** 2 + MNy ** 2 + 0.75 * T_III ** 2) ** (1 / 2);
-const MLx: number = RMy * l32 0 R
-const MtdL: number = ();
+const MLx: number = RMy * l32 - (Ft4 - RMy) * l31;
+// console.log(MLx);
+const MtdL: number = (MLx ** 2 + 0.75 * T_III ** 2) ** (1 / 2);
+const MtdK: number = (0.75 * T_III ** 2) ** (1 / 2);
+
+const dM = (MtdM / (0.1 * muy)) ** (1 / 3);
+const dN = (MtdN / (0.1 * muy)) ** (1 / 3);
+const dL = (MtdL / (0.1 * muy)) ** (1 / 3);
+const dK = (MtdK / (0.1 * muy)) ** (1 / 3);
+const dMInc = dM * 1.11;
+const dNInc = dN * 1.11;
+const dLInc = dL * 1.11;
+const dKInc = dK * 1.11;
+
+console.log(MtdM, MtdN, MtdL, MtdK);
 
 // *** KẾT THÚC CHƯƠNG 3 - PHẦN 8 ***
